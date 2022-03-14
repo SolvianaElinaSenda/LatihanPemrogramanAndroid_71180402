@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pertemuan05_71180402</string>
+    <string name="judul">Toton Plants</string>
+    <string name="username">Input Username</string>
+    <string name="password">Input Password</string>
+    <string name="login">Sign In</string>
+    <string name="regis">Sign Up</string>
+    <string name="todo">TO DO</string>
+
+</resources>
