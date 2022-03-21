@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pertemuan06_71180402</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textF1">Fragment A</string>
+    <string name="textF2">Fragment B</string>
+    <string name="textF3">Fragment C</string>
+    <string name="btnF1">Ke Halaman 2</string>
+    <string name="btnF2">Ke Halaman 3</string>
+    <string name="btnF3">Ke Halaman 1</string>
+
+
+
+</resources>
