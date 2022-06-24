@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "597934687429",
+    "project_id": "projectdatabuku-71180402",
+    "storage_bucket": "projectdatabuku-71180402.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597934687429:android:022973727cc7badf481cac",
+        "android_client_info": {
+          "package_name": "com.ilina.projectdatabuku_71180402"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597934687429-s7prasi9d6ilvumtpihdkjh5bdhihuic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh-Yn5Xqug566dCmRRsoWSu8-RYHo676g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597934687429-s7prasi9d6ilvumtpihdkjh5bdhihuic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
