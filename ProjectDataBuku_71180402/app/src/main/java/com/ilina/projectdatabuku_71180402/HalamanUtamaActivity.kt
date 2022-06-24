@@ -23,16 +23,16 @@ class HalamanUtamaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_halamanutama)
         firestore = FirebaseFirestore.getInstance()
 
-
+        //Jika tomobl dengan id logout di klik,maka otomatis akan lagsung menuju ke Main Activity
+        //atau halaman login
         btn=findViewById(R.id.logout)
         btn.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             val i= Intent(this,MainActivity::class.java)
             startActivity(i)
         }
-
+        //jika tombol add dickik akan langsung menuju ke halaman editor
         val btnAdd=findViewById<FloatingActionButton>(R.id.btnadd)
-
         btnAdd.setOnClickListener {
             val i=Intent(this,EditorActivity::class.java)
 
@@ -43,6 +43,8 @@ class HalamanUtamaActivity : AppCompatActivity() {
 
     }
     //ini untuk mengambil data
+    //funtion ini berfungsi untuk mengambil data dari collection
+    //dan datanya akan dimasukan ke dalam komponen dgan id txvHasil
     fun refreshData(){
         val txvHasil=findViewById<TextView>(R.id.txvHasil)
         firestore?.collection("buku")?.get()

@@ -59,11 +59,9 @@ class MainActivity : AppCompatActivity() {
             //start HalamanUtama activity
             startActivity(Intent(this@MainActivity,HalamanUtamaActivity::class.java))
             finish()
-            finish()
 
         }
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
                 super.onActivityResult(requestCode, resultCode, data)
                 if(requestCode== RC_SIGN_IN){
@@ -73,13 +71,10 @@ class MainActivity : AppCompatActivity() {
                         //google signin Success,new auth with firebase
                         val account=accountTask.getResult(ApiException::class.java)
                         firebaseAuthWithGoogleAccount(account)
-
-
                     }catch (e:Exception){
                         //failed google signIn
                         Log.d(TAG,"onActivityResult: ${e.message}")
                     }
-
             }
         }
 
@@ -103,24 +98,18 @@ class MainActivity : AppCompatActivity() {
                 if(authResult.additionalUserInfo!!.isNewUser){
                     Log.d(TAG,"firebaseAuthWithGoogleAccount: Account created...\n$email")
                     Toast.makeText(this@MainActivity,"Account created...\n$email",Toast.LENGTH_SHORT).show()
-
-
                 } else{
                     Log.d(TAG,"firebaseAuthWithGoogleAccount: Existing user...\n$email")
                     Toast.makeText(this@MainActivity,"LoggedIn...\n$email",Toast.LENGTH_SHORT).show()
-
                 }
                 //start profile activity
                 startActivity(Intent(this@MainActivity,HalamanUtamaActivity::class.java))
                 finish()
-
             }.addOnFailureListener{e->
             Log.d(TAG,"firebaseAuthWithGoogleAccount: Loggin Failed due to ${e.message}")
             Toast.makeText(this@MainActivity,"Loggin Failed due to ${e.message}",Toast.LENGTH_SHORT).show()
-
         }
     }
-
     }
 
 

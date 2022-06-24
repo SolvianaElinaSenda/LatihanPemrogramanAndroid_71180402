@@ -31,9 +31,6 @@ class EditorActivity : AppCompatActivity() {
         progressDialog.setMessage("Menyimpan...")
 
 
-
-
-
         btnSave.setOnClickListener {
             if (judulBuku.length() > 0 &&
                 namaPenulis.length() > 0 &&
@@ -55,13 +52,14 @@ class EditorActivity : AppCompatActivity() {
                 thnTerbit.setText("")
                 jmlHalaman.setText("")
                 progressDialog.show()
+                //data kemudian dimasukan ke dalam firestore
                 firestore?.collection("buku")?.add(buku)
                     ?.addOnSuccessListener {
                         Toast.makeText(applicationContext, "Data berhasil disimpan", Toast.LENGTH_SHORT)
                             .show()
                             progressDialog.dismiss()
                     }?.addOnFailureListener {
-//                        Log.d(TAG, "proses penyimpanan gagal")
+//
                         Toast.makeText(applicationContext, "Data Gagal Disimpan", Toast.LENGTH_SHORT)
                             .show()
                         progressDialog.dismiss()
